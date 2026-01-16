@@ -6,6 +6,8 @@ readme = "README.md"
 requires-python = ">=3.12"
 dependencies = [
     "boto3>=1.34.0",
+    "daft>=0.7.2",
+    "duckdb>=1.4.3",
     "polars>=1.36.1",
     "pyarrow>=22.0.0",
 ]

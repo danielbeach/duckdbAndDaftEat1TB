@@ -84,15 +84,12 @@ df = df.into_batches(200_000)  # Process in 200k row chunks
    export AWS_DEFAULT_REGION=us-east-1
    ```
 
-2. **Python Dependencies**: Install required packages:
-   ```bash
-   pip install duckdb daft pyarrow boto3
-   ```
+2. **Python Dependencies**: [Install `uv`](https://docs.astral.sh/uv/getting-started/installation/)
 
 ### Running DuckDB
 
 ```bash
-python duckdb_main.py
+uv run duckdb_main.py
 ```
 
 This will:
@@ -104,7 +101,7 @@ This will:
 ### Running Daft
 
 ```bash
-python daft_main.py
+uv run daft_main.py
 ```
 
 This will:
@@ -158,4 +155,3 @@ The key is using engines designed for analytical workloads (columnar processing,
 - Dataset Generator: [rustGenerate1TB](https://github.com/danielbeach/rustGenerate1TB)
 - [DuckDB Documentation](https://duckdb.org/docs/)
 - [Daft Documentation](https://www.getdaft.io/)
-
